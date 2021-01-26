@@ -5,6 +5,10 @@
  */
 package src20210125;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Campus FP
@@ -16,11 +20,15 @@ public class Main5 {
      */
     public static void main(String[] args) {
         int[] num1={34,21,7,73,53};
-        int[] num2={};
+        int[] num2={0,0,0,0,0};
+        System.arraycopy(num1, 0, num2, 0, num1.length);
+        System.out.println("ARRAY 1:");
         for(int i=0;i<num1.length;i++){
             System.out.println(num1[i]);
-            System.arraycopy(num1, i, num2, i, num1.length);
+        }
+        System.out.println("ARRAY 2:");
+        for(int i=0;i<num2.length;i++){
+            System.out.println(num2[i]);
         }
     }
-    
 }
